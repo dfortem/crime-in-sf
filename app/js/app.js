@@ -2,13 +2,11 @@
 
 // Declare app module
 angular.module('crimeApp', ['ngRoute'])
-.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
-
+.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
   .when('/', {
-  	templateUrl: '/index.html',
-  	controller: 'HelloWorldController'
+  	templateUrl: '/partials/crime-list.html',
+    controller: 'CrimeController'
   })
   .otherwise({redirectTo: '/'});
 }])

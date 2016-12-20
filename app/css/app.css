@@ -23,3 +23,13 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+.crime-title {
+	position: relative;
+	text-align: center;
+}
+
+.crime-item {
+	position: relative;
+	text-align: center;
+}
