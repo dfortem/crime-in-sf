@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Crime In San Francisco</title>
-  <meta name="description" content="">
+  <meta name="description" content="An exercise for the interview process at Checkr">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.0.9/angular-material.min.css">
   <link rel="stylesheet" href="css/app.css">
@@ -22,6 +22,13 @@
     <p ng-click = 'displayHelloWorld()'>Hello World!</p>
   <div>
 
+  <div ng-controller = 'CrimeController'>
+    <p ng-click = 'getCrimes()'>Click to Fetch</p>
+
+    <div ng-view></div>
+
+  </div>
+
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
@@ -32,5 +39,7 @@
   <sciprt src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
   <sciprt src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-aria.min.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/crime-api-factory.js"></script>
+  <script src="js/crime-controller.js"></script>
 </body>
 </html>
