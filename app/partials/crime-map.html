@@ -1,0 +1,15 @@
+<md-content>
+	<h3>{{$ctrl.crimes.length}} Results</h3>
+	<ng-map class='crime-map' zoom="13" center="[37.770000, -122.450000]">
+		<marker ng-repeat="crime in $ctrl.crimes" id="{{crime.case_number}}" on-click="$ctrl.onClick(crime)" position="{{$ctrl.markerPosition(crime)}}"></marker>
+		<info-window id="info">
+        <div ng-non-bindable="">
+          <strong>Case Number:</strong>  {{$ctrl.displayedCrime.case_number}}<br/>
+          <strong>Type:</strong>  {{$ctrl.displayedCrime.crime_type}}<br/>
+          <strong>Date:</strong>  {{$ctrl.displayedCrime.date_time | date:short}}<br/>
+          <strong>Accuracy:</strong>  {{$ctrl.displayedCrime.accuracy}}<br/>
+          <strong>Description:</strong> {{$ctrl.displayedCrime.description}}<br/>
+        </div>
+      </info-window>
+	</ng-map>
+</md-content>

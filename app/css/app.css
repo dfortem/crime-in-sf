@@ -1,27 +1,9 @@
 /* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.main-page {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1rem;
 }
 
 .crime-title {
@@ -32,4 +14,12 @@
 .crime-item {
 	position: relative;
 	text-align: center;
+}
+
+.crime-map {
+	height: 35rem;
+	width: 100%;
+	position: relative;
+  display: block;
+  margin-bottom: 1rem;
 }

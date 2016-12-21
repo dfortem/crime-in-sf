@@ -11,11 +11,11 @@
 			</div>
 		</md-list-item>
 		<md-divider></md-divider>
-		<md-list-item ng-repeat='crime in crimeToDisplay'>
+		<md-list-item ng-repeat="crime in $ctrl.crimes">
 			<div layout='row' flex>
 				<div class='crime-item' flex><p>{{crime.case_number}}</p></div>
 				<div class='crime-item' flex><p>{{crime.date_time | date:short}}</p></div>
-				<div class='crime-item' flex><p>[{{crime.lat}}, {{crime.long}}]</p></div>
+				<div class='crime-item' flex><p>[{{crime.lng}}, {{crime.lat}}]</p></div>
 				<div class='crime-item' flex><p>{{crime.crime_type}}</p></div>
 				<div class='crime-item' flex><p>{{crime.accuracy}}</p></div>
 				<div class='crime-item' flex><p>{{crime.description}}</p></div>

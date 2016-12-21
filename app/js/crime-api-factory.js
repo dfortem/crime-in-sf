@@ -33,11 +33,10 @@ angular.module("crimeApp")
       if (!object) return;
       var data;
       if(object.properties) data = object.properties;
-      console.log(data);
       if (object.geometry && object.geometry.coordinates.length === 2 &&
         object.geometry.type === "Point") {
-        data.lat = object.geometry.coordinates[0];
-        data.long = object.geometry.coordinates[1];
+        data.lng = object.geometry.coordinates[0];
+        data.lat = object.geometry.coordinates[1];
       }
       if (data) dataList.push(data);
     });
