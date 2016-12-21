@@ -1,6 +1,6 @@
 'use strict';
 
-var MapController = function (NgMap) {
+var MapController = function (NgMap, $filter) {
   var ctrl = this;
 
   ctrl.markerPosition = function (crime) {
@@ -33,6 +33,12 @@ var MapController = function (NgMap) {
   ctrl.$onChanges = function (changes) {
     ctrl.crimes = changes.crimes.currentValue;
     console.log('UPDATE!!!!');
+  };
+
+  ctrl.getCrimeLink = function () {
+  	return 'http://sanfrancisco.crimespotting.org/crime/' +
+  		ctrl.displayedCrime.date_time.substring(0,10) +
+  		'/' + ctrl.displayedCrime.crime_type + '/' + ctrl.displayedCrime.id;
   };
 };
 
