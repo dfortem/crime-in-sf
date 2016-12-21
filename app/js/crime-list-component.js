@@ -1,6 +1,6 @@
 'use strict';
 
-var ListController =function () {
+var ListController = function () {
   var ctrl = this;
 
   ctrl.$onInit = function () {
@@ -13,7 +13,6 @@ var ListController =function () {
     console.log('LIST UPDATE!!!!');
     console.log(ctrl.crimes);
   };
-  
 };
 
 angular.module('crimeApp').component('crimeList', {

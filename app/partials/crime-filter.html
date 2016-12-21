@@ -1,3 +1,36 @@
-<p ng-click = '$ctrl.onClick()'>Click to Fetch</p>
+<md-divider></md-divider>
+<md-content layout='row' layout-xs='column'>
+	<div class='filter-item' layout='column' flex>
+		<strong>Select Start Date</strong>
+    <md-datepicker ng-model="$ctrl.startDate" md-open-on-focus md-max-date="$ctrl.maxDate" ng-change='$ctrl.selectStartDate()' md-placeholder="Enter date"></md-datepicker>
+   </div>
+   <div class='filter-item' layout='column' flex>
+		<strong>Select End Date</strong>
+    <md-datepicker ng-model="$ctrl.endDate" md-open-on-focus md-max-date="$ctrl.maxDate" md-min-date="$ctrl.startDate" md-placeholder="Enter date"></md-datepicker>
+   </div>
+	<md-menu class='filter-item' flex>
+		<md-button md-no-ink ng-click = '$ctrl.openMenu($mdOpenMenu, $event)'>Select Crime Type</md-button>
+		<md-menu-content>
+			<md-menu-item class='crime-type'>
+				<md-checkbox md-prevent-menu-close="md-prevent-menu-close" aria-label="Select All" ng-checked="$ctrl.isChecked()" md-indeterminate="$ctrl.isIndeterminate()" ng-click="$ctrl.toggleAll()">
+					<span ng-if="$ctrl.isChecked()">Un </span>Select All
+				</md-checkbox>
+      </md-menu-item>
+	    <md-menu-item class='crime-type' ng-repeat="type in $ctrl.crimeTypes">
+				<md-checkbox ng-model="type.selected" aria-label="type.name">{{type.name}}</md-checkbox>
+	    </md-menu-item>
+	  </md-menu-content>
+	</md-menu>
+</md-content>
+<md-divider></md-divider>
+<md-content layout="row" layout-align="center">
+	<md-button md-no-ink class="crime-result-button md-primary" ng-click = '$ctrl.onClick()'>Display Results</md-button>
+</md-content>
+<md-content layout="row" layout-align="center">
+	<h3 ng-if='!$ctrl.loading'>{{$ctrl.crimeToDisplay.length}} Results</h3>
+	<div class='progress-circle'>
+		<md-progress-circular ng-if='$ctrl.loading' md-diameter='22px' md-mode="indeterminate"></md-progress-circular>
+	</div>
+</md-content>
 <crime-map crimes="$ctrl.crimeToDisplay"></crime-map>
 <crime-list crimes="$ctrl.crimeToDisplay"></crime-lit>

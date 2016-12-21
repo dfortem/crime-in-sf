@@ -3,7 +3,6 @@
 angular.module("crimeApp")
 .factory("crimeFactory", ["$http", "$httpParamSerializer", "$filter",
   function ($http, $httpParamSerializer, $filter) {
-
   var urlBase = "http://sanfrancisco.crimespotting.org/crime-data?";
   var dataFactory = {};
 
@@ -32,7 +31,7 @@ angular.module("crimeApp")
     _.each(brutData.data.features, function (object) {
       if (!object) return;
       var data;
-      if(object.properties) data = object.properties;
+      if (object.properties) data = object.properties;
       if (object.geometry && object.geometry.coordinates.length === 2 &&
         object.geometry.type === "Point") {
         data.lng = object.geometry.coordinates[0];

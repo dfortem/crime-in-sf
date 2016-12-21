@@ -23,3 +23,30 @@
   display: block;
   margin-bottom: 1rem;
 }
+
+.crime-type {
+	padding-left: 1rem !important;
+}
+
+.md-menu-content {
+	height: 20rem;
+}
+
+.filter-item {
+	text-align: center;
+	veritcal-align: middle;
+	padding: 1rem;
+}
+
+.crime-result-button {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.progress-circle {
+	margin: 1rem;
+}
+
+h1, h3 {
+	text-align: center;
+}

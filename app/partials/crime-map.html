@@ -1,5 +1,4 @@
 <md-content>
-	<h3>{{$ctrl.crimes.length}} Results</h3>
 	<ng-map class='crime-map' zoom="13" center="[37.770000, -122.450000]">
 		<marker ng-repeat="crime in $ctrl.crimes" id="{{crime.case_number}}" on-click="$ctrl.onClick(crime)" position="{{$ctrl.markerPosition(crime)}}"></marker>
 		<info-window id="info">
