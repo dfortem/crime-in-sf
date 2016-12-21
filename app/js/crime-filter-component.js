@@ -64,10 +64,10 @@ var CrimeController = function (crimeFactory, $filter) {
       if (type.selected) types += type.tag + ',';
     });
     types = types.substring(0, types.length - 1);
-    console.log(types);
     if (types !== '') params.type = types;
     //fetch data
     ctrl.loading = true;
+    console.log('Loading...');
     crimeFactory.getCrimesFiltered(params)
       .then(crimeFactory.createDataList)
       .then(function (response) {
@@ -83,9 +83,7 @@ var CrimeController = function (crimeFactory, $filter) {
   };
 
   ctrl.onClick = function () {
-    console.log('loading...');
     ctrl.getCrimes();
-    console.log(ctrl.a);
   };
 
   ctrl.selectStartDate = function () {
