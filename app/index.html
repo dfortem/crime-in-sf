@@ -13,33 +13,29 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-  <h1>Crime in San Francisco</h1>
+  <div class='main-page'>
+    <h1>Crime in San Francisco</h1>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-  <div ng-controller = 'HelloWorldController'>
-    <p ng-click = 'displayHelloWorld()'>Hello World!</p>
-  <div>
-
-  <div ng-controller = 'CrimeController'>
-    <p ng-click = 'getCrimes()'>Click to Fetch</p>
-
-    <div ng-view></div>
-
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <crime-filter></crime-filter>
   </div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.0.9/angular-material.min.js"></script>
-  <sciprt src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
   <sciprt src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-aria.min.js"></script>
+  <sciprt src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
+  <script src="//maps.google.com/maps/api/js?key=AIzaSyAg-Ylxh408M1Pj9Z2yNQZfacSo2TfkueA"></script>
+  <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/crime-api-factory.js"></script>
-  <script src="js/crime-controller.js"></script>
+  <script src="js/crime-filter-component.js"></script>
+  <script src="js/crime-map-component.js"></script>
+  <script src="js/crime-list-component.js"></script>
 </body>
 </html>
