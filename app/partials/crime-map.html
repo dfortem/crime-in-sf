@@ -1,14 +1,12 @@
-<md-content>
+<md-content layout='row' layout-align="center">
 	<ng-map class='crime-map' zoom="13" center="[37.770000, -122.450000]">
 		<marker ng-repeat="crime in $ctrl.crimes" id="{{crime.case_number}}" on-click="$ctrl.onClick(crime)" position="{{$ctrl.markerPosition(crime)}}"></marker>
 		<info-window id="info">
-        <div ng-non-bindable="">
-          <strong>Case Number:</strong>  {{$ctrl.displayedCrime.case_number}}<br/>
-          <strong>Type:</strong>  {{$ctrl.displayedCrime.crime_type}}<br/>
-          <strong>Date:</strong>  {{$ctrl.displayedCrime.date_time | date:short}}<br/>
-          <strong>Accuracy:</strong>  {{$ctrl.displayedCrime.accuracy}}<br/>
-          <strong>Description:</strong> {{$ctrl.displayedCrime.description}}<br/>
-        </div>
-      </info-window>
+      <div ng-non-bindable="">
+        <h2>{{$ctrl.displayedCrime.crime_type}}</h2>
+        <p><strong>Date:</strong> {{$ctrl.displayedCrime.date_time}}</p>
+        <p><a class='crime-link' href='{{$ctrl.getCrimeLink()}}'>Case File</a></p>
+      </div>
+    </info-window>
 	</ng-map>
 </md-content>

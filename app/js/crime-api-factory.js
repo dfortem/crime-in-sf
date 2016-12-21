@@ -37,6 +37,7 @@ angular.module("crimeApp")
         data.lng = object.geometry.coordinates[0];
         data.lat = object.geometry.coordinates[1];
       }
+      if(object.id) data.id = object.id;
       if (data) dataList.push(data);
     });
 
