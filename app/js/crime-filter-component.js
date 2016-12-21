@@ -5,7 +5,7 @@ var CrimeController = function (crimeFactory, $filter) {
 
   ctrl.$onInit = function () {
     ctrl.crimeToDisplay = [];
-    ctrl.loading = true;
+    ctrl.loading = false;
     ctrl.maxDate = new Date (2015, 2, 18);
     ctrl.defaultDate = new Date (2015, 2, 11);
     ctrl.startDate = ctrl.defaultDate;
@@ -49,8 +49,6 @@ var CrimeController = function (crimeFactory, $filter) {
       name: 'Prostitution',
       tag: 'Pr',
       selected: true}];
-
-    ctrl.getCrimes();
   };
 
   ctrl.getCrimes = function () {
