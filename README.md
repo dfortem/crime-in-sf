@@ -1,22 +1,14 @@
 # crime-in-sf
-This project is an exercise for the interview process at Checkr.
+This project is an exercise on Angular and RESTful APIs 
 
 ## Exercise Description
 "This project consists in building a service that will present an interface to view crimes distributed over time and location, using http://sanfrancisco.crimespotting.org/api.
 
-It's open-ended, on purpose :) 
-  
-You’re free to use the languages, frameworks and libraries of your choice. There is no need to setup a database.
-
-This is a simple exercise, but organize, design and test your code as if it were going into production.
-
-Here are some core requirements:
+Core requirements:
 - Build filtering by dates and type of crimes
 - Allow visualization on a map
 - The service should be deployed and accessible without any local setup
 - You will need to share access to code repository
-
-Please share with us your private repo on github/bitbucket/whatever so that we can track your progress and see your commits history."
 
 ## Getting Started
 
